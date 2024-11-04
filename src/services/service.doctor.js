@@ -1,11 +1,8 @@
-
+import repoDoctor from "../repositories/repository.doctor.js"
 
 
 async function Listar() {
-    const doctors = [{id: 1, name: "Joao", specialty: "Cardiologista", icon: "M"},
-                     {id: 2, name: "Antonio", specialty: "Clinico Geral", icon: "M"},
-                     {id: 3, name: "Maria", specialty: "Cardiologista", icon: "F"}
-                    ];
+    const doctors = await repoDoctor.Listar();
     return doctors;
 }
 
